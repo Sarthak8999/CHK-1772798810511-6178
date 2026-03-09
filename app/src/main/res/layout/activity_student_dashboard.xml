@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Student"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/todayUsageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today Usage"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/remainingTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remaining Time"/>
+
+    <ProgressBar
+        android:id="@+id/screenTimeProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/requestAccessButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request More Time"
+        android:layout_marginTop="20dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_menu"/>
+
+</LinearLayout>

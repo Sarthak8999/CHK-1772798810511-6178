@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/referralCodeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Referral Code"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/todayUsageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today's Usage"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/weeklyUsageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weekly Usage"/>
+
+    <TextView
+        android:id="@+id/totalAppsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Apps"/>
+
+    <Button
+        android:id="@+id/viewAppsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Installed Apps"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/setLimitsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set App Limits"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/viewUsageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Usage"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_menu"/>
+
+</LinearLayout>
