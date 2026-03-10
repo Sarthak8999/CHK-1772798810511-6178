@@ -14,13 +14,14 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.studentparent.monitor.R;
-import com.studentparent.monitor.adapter.StudentRequestsAdapter;
-import com.studentparent.monitor.model.TimeRequest;
-import com.studentparent.monitor.utils.PreferenceManager;
+import com.example.smartparentcontrol.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import adapter.StudentRequestsAdapter;
+import model.TimeRequest;
+import utils.PreferenceManager;
 
 public class StudentRequestsActivity extends AppCompatActivity {
 

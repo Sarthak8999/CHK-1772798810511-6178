@@ -9,11 +9,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.smartparentcontrol.R;
-import com.smartparentcontrol.model.AppInfo;
+import com.example.smartparentcontrol.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import model.AppInfo;
 
 public class InstalledAppsAdapter extends RecyclerView.Adapter<InstalledAppsAdapter.ViewHolder> {
 

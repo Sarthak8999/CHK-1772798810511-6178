@@ -7,7 +7,6 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.smartparentcontrol.R;
-import com.studentparent.monitor.ui;
 
 public class RoleSelectionActivity extends AppCompatActivity {
 
