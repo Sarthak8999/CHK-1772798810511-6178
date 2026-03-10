@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.smartparentcontrol">
+
+
+    <!-- Internet and Network -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <!-- Usage Stats for monitoring app usage -->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    
+    <!-- Foreground Service for monitoring -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    
+    <!-- Query all packages to get installed apps -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    
+    <!-- Post notifications (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartParentControl">
+        
+        <!-- LAUNCHER ACTIVITY - Splash Screen -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Role Selection Activity -->
+        <activity
+            android:name="ui.RoleSelectionActivity"
+            android:exported="false" />
+
+        <!-- NEW: Role Selection Activity (New Package) -->
+        <activity
+            android:name=".activities.RoleSelectionActivity"
+            android:exported="false"
+            android:label="Select Role" />
+
+        <!-- Authentication Activities -->
+        <activity
+            android:name="ui.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="ui.RegisterActivity"
+            android:exported="false" />
+
+        <!-- Dashboard Activities -->
+        <activity
+            android:name="ui.ParentDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name="ui.StudentDashboardActivity"
+            android:exported="false" />
+
+        <!-- Request Management Activities -->
+        <activity
+            android:name="ui.RequestsActivity"
+            android:exported="false" />
+        <activity
+            android:name="ui.StudentRequestsActivity"
+            android:exported="false" />
+        
+        <!-- NEW: Student Requests Activity (New Package) -->
+        <activity
+            android:name=".activities.StudentRequestsActivity"
+            android:exported="false"
+            android:label="My Requests" />
+        
+        <!-- NEW: Parent Requests Activity (New Package) -->
+        <activity
+            android:name=".activities.ParentRequestsActivity"
+            android:exported="false"
+            android:label="Student Requests" />
+
+        <!-- App Management Activities -->
+        <activity
+            android:name="ui.InstalledAppsActivity"
+            android:exported="false" />
+        
+        <!-- NEW: Installed Apps Activity (New Package) -->
+        <activity
+            android:name=".activities.InstalledAppsActivity"
+            android:exported="false"
+            android:label="Installed Apps" />
+        
+        <activity
+            android:name="ui.UsageStatsActivity"
+            android:exported="false" />
+        
+        <!-- NEW: Set Time Limit Activity (New Package) -->
+        <activity
+            android:name=".activities.SetTimeLimitActivity"
+            android:exported="false"
+            android:label="Set Time Limit" />
+        
+        <activity
+            android:name="ui.TimeLimitBlockActivity"
+            android:exported="false" />
+        
+        <!-- NEW: Time Limit Block Activity (New Package) -->
+        <activity
+            android:name=".activities.TimeLimitBlockActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:label="App Blocked"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        
+        <activity
+            android:name="ui.SetAppTimeLimitActivity"
+            android:exported="false" />
+            
+        <!-- Monitoring Services -->
+        <service
+            android:name="service.AppMonitoringService"
+            android:enabled="true"
+            android:exported="false" />
+        
+        <!-- NEW: App Usage Monitor Service (New Package) -->
+        <service
+            android:name=".services.AppUsageMonitorService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+            
+    </application>
+
+</manifest>
